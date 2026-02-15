@@ -2,7 +2,7 @@
 
 A complete, ground-up implementation of the original Transformer model proposed in the paper *"Attention Is All You Need"* (Vaswani et al., 2017). This repository contains a PyTorch implementation of the sequence-to-sequence Encoder-Decoder architecture, designed for Neural Machine Translation (NMT).
 
-## 🚀 Key Features
+## Key Features
 * **Built from First Principles:** Every component (Self-Attention, Multi-Head Attention, LayerNorm, Positional Encoding) is implemented from scratch without using pre-built Transformer layers.
 * **Efficient Training:** Implements the **One Cycle Learning Rate Policy** for faster convergence.
 * **High Performance:** Achieves a **Cross Entropy Loss < 3.6 in under 10 epochs** on standard translation datasets (English-French / English-Italian).
@@ -10,11 +10,11 @@ A complete, ground-up implementation of the original Transformer model proposed 
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 The Transformer replaces traditional Recurrent Neural Networks (RNNs) and CNNs with an architecture based entirely on attention mechanisms. This allows for significantly more parallelization and better handling of long-range dependencies.
 
-<img width="920" height="1308" alt="image" src="https://github.com/user-attachments/assets/7e8fd27c-6b28-4785-8136-ffb713de6751" />
+<img width="281" height="400" alt="image" src="https://github.com/user-attachments/assets/7e8fd27c-6b28-4785-8136-ffb713de6751" />
 
 
 ### The Encoder-Decoder Structure
@@ -38,7 +38,7 @@ Each of the layers in our encoder and decoder contains a fully connected feed-fo
 
 ---
 
-## 📉 Performance & Results
+## Performance & Results
 
 This implementation was tested on **English-to-French** and **English-to-Italian** translation tasks.
 
@@ -53,27 +53,6 @@ This implementation was tested on **English-to-French** and **English-to-Italian
 | **Optimizer** | **Adam** ($\beta_1=0.9, \beta_2=0.98, \epsilon=10^{-9}$) |
 
 
-├── models/
-│   ├── embedding.py       # Input Embeddings & Positional Encoding
-│   ├── attention.py       # Scaled Dot-Product & Multi-Head Attention
-│   ├── encoder.py         # Encoder Layer & Stack
-│   ├── decoder.py         # Decoder Layer & Stack
-│   └── transformer.py     # Full Transformer Assembly
-├── training/
-│   ├── train.py           # Training loop & Validation
-│   └── optimizer.py       # Learning rate scheduling
-├── utils/
-│   ├── tokenizer.py       # Byte-Pair Encoding (BPE) / Word-Level
-│   └── plotting.py        # Attention map visualization
-├── notebooks/
-│   └── Demo_Notebook.ipynb # Walkthrough & Visuals
-└── README.md
-
-
-## 📜 References
+## References
 * Vaswani, A., et al. (2017). [Attention Is All You Need](https://arxiv.org/abs/1706.03762). NeurIPS.
 * Annotated Transformer (Harvard NLP).
-
----
-
-## 📂 Repository Structure
